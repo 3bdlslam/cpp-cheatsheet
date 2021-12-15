@@ -378,6 +378,25 @@ if (cin)                    // Good state (not EOF)?
                             // To read/write any type T:
 istream& operator>>(istream& i, T& x) {i >> ...; x=...; return i;}
 ostream& operator<<(ostream& o, const T& x) {return o << ...;}
+
+printf ("Characters: %c %c \n", 'a', 65);        // Characters: a A
+printf ("Decimals: %d %ld\n", 1977, 650000L);    // Decimals: 1977 650000
+printf ("Preceding with blanks: %10d \n", 1977); //Preceding with blanks:       1977
+printf ("Preceding with zeros: %010d \n", 1977); // Preceding with zeros: 0000001977
+printf ("Width trick: %*d \n", 5, 10);           // Width trick:    10
+printf ("%s \n", "A string");                    // A string
+printf ("Some different radices: %d %x %o %#x %#o \n", 100, 100, 100, 100, 100);
+                                // Some different radices: 100 64 144 0x64 0144
+printf ("floats: %4.2f %+.0e %E \n", 3.1416, 3.1416, 3.1416);//floats: 3.14 +3e+000 3.141600E+000  
+
+printf ("Enter your family name: ");
+scanf ("%79s",str);  
+printf ("Enter your age: ");
+scanf ("%d",&i);
+printf ("Mr. %s , %d years old.\n",str,i);
+printf ("Enter a hexadecimal number: ");
+scanf ("%x",&i);
+printf ("You have entered %#x (%d).\n",i,i);
 ```
 
 ## `fstream.h`, `fstream` (File I/O works like `cin`, `cout` as above)
